@@ -57,7 +57,7 @@
  *       #OS_MAX_PATH_LEN.  (limit is not verified)
  */
 #define DS_DEF_DEST_FILENAME "/cf/ds_file_tbl.tbl"
-
+#ifndef CFE_EDS_ENABLED_BUILD
 /**
  *  \brief Destination File Table -- number of files
  *
@@ -74,7 +74,7 @@
  *       enforced limit for this parameter.
  */
 #define DS_DEST_FILE_CNT 16
-
+#endif
 /**
  *  \brief Destination File Table -- pathname buffer size
  *
@@ -108,7 +108,7 @@
  *       maximum filename size allowed by the OS (#OS_MAX_PATH_LEN).
  */
 #define DS_BASENAME_BUFSIZE OS_MAX_PATH_LEN
-
+#ifndef CFE_EDS_ENABLED_BUILD
 /**
  *  \brief Destination File Table -- extension buffer size
  *
@@ -125,7 +125,7 @@
  *       maximum filename size allowed by the OS (#OS_MAX_PATH_LEN).
  */
 #define DS_EXTENSION_BUFSIZE 8
-
+#endif
 /**
  *  \brief Packet Filter Table -- logical table name
  *
@@ -141,7 +141,6 @@
  *       #CFE_MISSION_TBL_MAX_NAME_LENGTH.  (limit is not verified)
  */
 #define DS_FILTER_TBL_NAME "FILTER_TBL"
-
 /**
  *  \brief Packet Filter Table -- default table filename
  *
@@ -154,7 +153,7 @@
  *       #OS_MAX_PATH_LEN.  (limit is not verified)
  */
 #define DS_DEF_FILTER_FILENAME "/cf/ds_filter_tbl.tbl"
-
+#ifndef CFE_EDS_ENABLED_BUILD
 /**
  *  \brief Packet Filter Table -- number of packets
  *
@@ -188,7 +187,6 @@
  *       and not greater than #DS_DEST_FILE_CNT.
  */
 #define DS_FILTERS_PER_PACKET 4
-
 /**
  *  \brief Common Table File -- descriptor text buffer size
  *
@@ -202,7 +200,7 @@
  *       of four bytes for alignment.  There is no upper limit.
  */
 #define DS_DESCRIPTOR_BUFSIZE 32
-
+#endif
 /**
  *  \brief Filename Sequence Count -- number of digits
  *
